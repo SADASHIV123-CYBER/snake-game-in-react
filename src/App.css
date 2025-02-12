@@ -21,139 +21,101 @@ body {
 /* Game Container */
 .game-container {
   background: rgba(0, 0, 0, 0.9);
-  padding: 20px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.3);
-  max-width: 600px;
+  max-width: 90%;
   border: 2px solid #00ffff;
 }
 
 /* Title */
 h1 {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 22px;
   color: #00ffea;
-  text-shadow: 0px 0px 15px #00ffff;
+  text-shadow: 0px 0px 10px #00ffff;
 }
 
 /* Game Over Text */
 .game-over {
   color: red;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
   text-shadow: 0px 0px 10px red, 0px 0px 20px darkred;
-  animation: blink 1s infinite alternate;
-}
-
-@keyframes blink {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
 }
 
 /* Game Board */
 .board {
   display: grid;
-  grid-template-rows: repeat(20, 25px);
+  grid-template-rows: repeat(20, 15px);
   gap: 2px;
   background: rgba(255, 255, 255, 0.05);
   padding: 5px;
   border-radius: 10px;
-  margin: 20px auto;
+  margin: 10px auto;
   border: 2px solid #00ffff;
-  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
 }
 
 .row {
   display: grid;
-  grid-template-columns: repeat(20, 25px);
+  grid-template-columns: repeat(20, 15px);
   gap: 2px;
 }
 
 /* Grid Cells */
 .cell {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
+  border-radius: 3px;
   transition: 0.2s ease;
 }
 
 /* Snake Style */
 .snake {
   background: linear-gradient(45deg, #00ffea, #00ccff);
-  box-shadow: 0px 0px 15px #00ffff;
-  border-radius: 5px;
-  animation: snake-glow 0.5s infinite alternate;
-}
-
-@keyframes snake-glow {
-  from {
-    box-shadow: 0px 0px 10px #00ffff;
-  }
-  to {
-    box-shadow: 0px 0px 20px #00ffff;
-  }
+  box-shadow: 0px 0px 10px #00ffff;
+  border-radius: 3px;
 }
 
 /* Food Style */
 .food {
   background: radial-gradient(circle, #ff0033, darkred);
-  box-shadow: 0px 0px 15px red;
+  box-shadow: 0px 0px 10px red;
   border-radius: 50%;
-  animation: pulse 0.8s infinite alternate;
 }
 
-@keyframes pulse {
-  from {
-    box-shadow: 0px 0px 15px red;
-  }
-  to {
-    box-shadow: 0px 0px 25px red;
-  }
-}
-
-/* Developer Name - Cyberpunk Effect */
+/* Developer Name */
 .developer-name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #00ffcc;
-  text-shadow: 0px 0px 10px #00ffcc, 0px 0px 20px #00ffee;
-  margin-top: 10px;
-  letter-spacing: 2px;
-  animation: name-glow 1.5s infinite alternate;
+  text-shadow: 0px 0px 5px #00ffcc;
 }
 
-@keyframes name-glow {
-  from {
-    text-shadow: 0px 0px 10px #00ffcc, 0px 0px 20px #00ffee;
-  }
-  to {
-    text-shadow: 0px 0px 20px #00ffcc, 0px 0px 30px #00ffee;
-  }
+/* Mobile Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
 }
 
-/* Add Mobile Responsiveness */
-@media (max-width: 768px) {
-  .game-container {
-    max-width: 90%;
-    padding: 15px;
-  }
+.middle-controls {
+  display: flex;
+  gap: 15px;
+  margin: 5px 0;
+}
 
-  .board {
-    grid-template-rows: repeat(20, 15px);
-  }
-
-  .row {
-    grid-template-columns: repeat(20, 15px);
-  }
-
-  .cell {
-    width: 15px;
-    height: 15px;
-  }
+/* Restart Button */
+.restart-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background: #ff0033;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
